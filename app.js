@@ -27,7 +27,7 @@ app.post('/signup', (req, res) => {
 
   var MongoClient = require('mongodb').MongoClient;
 
-  var uri = "mongodb_url";
+  var uri = "mongodb+srv://luis_alarcon:MDawwjoqQ3jFQr9y@cluster0-prw1g.mongodb.net/test?retryWrites=true";
   MongoClient.connect(uri, function(err, client) {
     if (err) throw err;
     const collection = client.db("Grupo-G").collection("actitud_free_test");
@@ -56,10 +56,36 @@ app.post('/signup', (req, res) => {
     client.close();
   });
   if (!newsletter){
+    console.log("hi")
+    console.log(newsletter)
+    const options = {};
 
+    request(options, (err, response, body) => {
+      if (err) {
+        res.redirect('/fail.html');
+      } else {
+        if (response.statusCode === 200) {
+          res.redirect('/success_test.html');
+        } else {
+          res.redirect('/fail.html');
+        }
+      }
+    });
   } else {
     console.log("hi")
     console.log(newsletter)
+    const options = {};
+    request(options, (err, response, body) => {
+      if (err) {
+        res.redirect('/fail.html');
+      } else {
+        if (response.statusCode === 200) {
+          res.redirect('/success_newsletter.html');
+        } else {
+          res.redirect('/fail.html');
+        }
+      }
+    });
   }
 
 
