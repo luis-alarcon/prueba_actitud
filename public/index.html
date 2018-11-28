@@ -1,368 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://bootswatch.com/4/simplex/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
 
-    <title>Newsletter Signup</title>
-  </head>
-  <body>
-    <div class="container">
-      <section class="mt-5">
-        <section class ="text-center">
-          <h1><i class="fas fa-feather-alt fa-5x"></i></h1>
-          <h1 class="display-4">Prueba de Actitud</h1>
-          <p class="lead">
-            Enter your info to get our awesome monthly newsletter
-          </p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous" />
+
+  <title>Newsletter Signup</title>
+</head>
+
+<body>
+  <div class="container">
+    <section class="mt-5">
+      <section class="text-center">
+        <h1><i class="fas fa-feather-alt fa-5x"></i></h1>
+        <h1 class="display-4">Prueba de Actitud</h1>
+        <p class="lead">
+          Enter your info to get our awesome monthly newsletter
+        </p>
       </section>
-      <form>
-        <fieldset class="form-group">
-          <!-- Question/Pregunta -->
-          <legend>1. Si acaba de tener una idea que le parece muy interesante,
-            ¿qué actitud toma?</legend>
+    </section>
+    <form action="/signup" method="POST">
+      <fieldset class="form-group">
+        <!-- Question/Pregunta -->
+        <legend>1. Si acaba de tener una idea que le parece muy interesante,
+          ¿qué actitud toma?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="pregunta_1" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio1">
+              Necesita que otras personas la aprueban, para seguir pensando
+              qué va a hacer.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="pregunta_1" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio2">
+              La revisa por los cuatro costados, con personas idóneas,
+              y luego comienza la acción.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio3" name="pregunta_1" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio3">
+              Se pone inmediato a su ejecución.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio4" name="pregunta_1" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio4">
+              La deja para otra oportunidad, por miedo a equivocarse,
+              porque la ve muy audaz, por inhibición, etc.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>2. Al enfrentar dificultades, ¿cómo reacciona?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio5" name="pregunta_2" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio5">
+              Sale corriendo.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio6" name="pregunta_2" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio6">
+              Se angustia.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio7" name="pregunta_2" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio7">
+              Se ve estimulado, como el toro ante el color rojo.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio8" name="pregunta_2" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio8">
+              Se mantiene sereno, y toma distancia para reflexionar
+              en busca de la solución.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>3. A la pregunta clásica: ante una botella de vino que
+          contiene exactamente la mitad de su capacidad, ¿qué dice?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio9" name="pregunta_3" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio9">
+              ‘Está medio llena’.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio10" name="pregunta_3" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio10">
+              ‘Está medio vacía’.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio11" name="pregunta_3" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio11">
+              ‘Qué lástima, podría estar llena’.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio12" name="pregunta_3" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio12">
+              ‘Qué suerte, podría estar vacía’.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>4. Si usted visualiza con la mente una pared que le cierra
+          el camino, ¿qué piensa a continuación?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio13" name="pregunta_4" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio13">
+              Se siente incapaz de seguir adelante..</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio14" name="pregunta_4" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio14">
+              Tiene la sensación de que se le va a caer encima.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio15" name="pregunta_4" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio15">
+              Idea una forma de rodearla y seguir adelante.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio16" name="pregunta_4" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio16">
+              Piensa en cómo tirarla abajo.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>5. Acaba de ser rechazada/o para un puesto laboral, y al
+          estar en la calle piensa o siente:</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio17" name="pregunta_5" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio17">
+              ‘Quizá no soy lo suficientemente capaz para este tipo
+              de trabajo’.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio18" name="pregunta_5" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio18">
+              ‘Debo descubrir algunas fallas en mí, y superarlas’.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio19" name="pregunta_5" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio19">
+              ‘Cada persona tiene un trabajo que la está esperando,
+              y llega más tarde o más temprano’.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio20" name="pregunta_5" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio20">
+              ‘Yo nunca tengo suerte’.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>6. ¿Qué frase aplicaría o aplica más, en general,
+          ante las circunstancias de la vida?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio21" name="pregunta_6" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio21">
+              ‘Después de la tormenta viene la
+              tranquilidad’.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio22" name="pregunta_6" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio22">
+              ‘Todo lo bueno se termina’.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio23" name="pregunta_6" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio23">
+              ‘Los sueños, sueños son’.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio24" name="pregunta_6" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio24">
+              ‘Lo último que se pierde es la esperanza’.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>7. Un familiar o amigo le dijo que volvería a las
+          10, son las once y media y todavía no ha llegado.
+          ¿Qué actitud toma?</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio25" name="pregunta_7" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio25">
+              Piensa inmediatamente que le pasó algo y en
+              cualquier momento llama a la policía.</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio26" name="pregunta_7" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio26">
+              Empieza a preocuparse.</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio27" name="pregunta_7" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio27">
+              Se pone a enumerar todas las razones por las
+              cuales puede haberse producido la demora.</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio28" name="pregunta_7" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio28">
+              Se pone a mirar TV sin pensar en el asunto.</label>
+          </div>
+        </div>
+        <!-- Question/Pregunta -->
+        <legend>8. Acaba de discutir agriamente con una persona,
+          a la que tendrá que seguir tratando, y luego de la
+          disputa piensa:</legend>
+        <div class="form-group">
+          <!-- Op A -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio29" name="pregunta_8" class="custom-control-input" value="NAP" checked="">
+            <label class="custom-control-label" for="customRadio29">
+              ‘Lo voy a mandar a…’</label>
+          </div>
+          <!-- Op B -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio30" name="pregunta_8" class="custom-control-input" value="PAP" checked="">
+            <label class="custom-control-label" for="customRadio30">
+              ‘Bien, ya pasó…’</label>
+          </div>
+          <!-- Op C -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio31" name="pregunta_8" class="custom-control-input" value="SAP" checked="">
+            <label class="custom-control-label" for="customRadio31">
+              ¿Cómo no entiende que tengo toda la razón?’</label>
+          </div>
+          <!-- Op D -->
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio32" name="pregunta_8" class="custom-control-input" value="BAP" checked="">
+            <label class="custom-control-label" for="customRadio32">
+              ‘Voy a repasar toda la discusión. Seguramente,
+              debe haber puntos en los que puedo estar
+              equivocado. Si es así, le ofreceré disculpas y
+              olvidaremos bien todo el asunto’.</label>
+          </div>
+        </div>
+        <section class="row mt-5 text-center">
+          <div class="col-md-6 m-auto">
+            <h2 class="display-5">Recibe los resultados de tu prueba</h2>
+            <p class="lead">
+              Entra tu nombre, apellido y correo
+            </p>
             <div class="form-group">
-              <!-- Op A -->
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="customRadio"
-                class="custom-control-input" value="PAP" checked="">
-                <label class="custom-control-label" for="customRadio1">
-                  Necesita que otras personas la aprueban, para seguir pensando
-                  qué va a hacer.</label>
-              </div>
-              <!-- Op B -->
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="customRadio"
-                class="custom-control-input" value="BAP" checked="">
-                <label class="custom-control-label" for="customRadio2">
-                  La revisa por los cuatro costados, con personas idóneas,
-                  y luego comienza la acción.</label>
-              </div>
-              <!-- Op C -->
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio3" name="customRadio"
-                class="custom-control-input" value="SAP" checked="">
-                <label class="custom-control-label" for="customRadio3">
-                   Se pone inmediato a su ejecución.</label>
-              </div>
-              <!-- Op D -->
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio4" name="customRadio"
-                class="custom-control-input" value="NAP" checked="">
-                <label class="custom-control-label" for="customRadio4">
-                  La deja para otra oportunidad, por miedo a equivocarse,
-                  porque la ve muy audaz, por inhibición, etc.</label>
-              </div>
-            </div>
-            <!-- Question/Pregunta -->
-            <legend>2. Al enfrentar dificultades, ¿cómo reacciona?</legend>
-              <div class="form-group">
-                <!-- Op A -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio5" name="customRadio1"
-                  class="custom-control-input" value="NAP" checked="">
-                  <label class="custom-control-label" for="customRadio5">
-                    Sale corriendo.</label>
-                </div>
-                <!-- Op B -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio6" name="customRadio1"
-                  class="custom-control-input" value="PAP" checked="">
-                  <label class="custom-control-label" for="customRadio6">
-                    Se angustia.</label>
-                </div>
-                <!-- Op C -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio7" name="customRadio1"
-                  class="custom-control-input" value="SAP" checked="">
-                  <label class="custom-control-label" for="customRadio7">
-                     Se ve estimulado, como el toro ante el color rojo.</label>
-                </div>
-                <!-- Op D -->
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio8" name="customRadio1"
-                  class="custom-control-input" value="BAP" checked="">
-                  <label class="custom-control-label" for="customRadio8">
-                    Se mantiene sereno, y toma distancia para reflexionar
-                    en busca de la solución.</label>
-                </div>
-              </div>
-              <!-- Question/Pregunta -->
-              <legend>3. A la pregunta clásica: ante una botella de vino que
-                contiene exactamente la mitad de su capacidad, ¿qué dice?</legend>
-                <div class="form-group">
-                  <!-- Op A -->
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio9" name="customRadio2"
-                    class="custom-control-input" value="NAP" checked="">
-                    <label class="custom-control-label" for="customRadio9">
-                      ‘Está medio llena’.</label>
-                  </div>
-                  <!-- Op B -->
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio10" name="customRadio2"
-                    class="custom-control-input" value="PAP" checked="">
-                    <label class="custom-control-label" for="customRadio10">
-                      ‘Está medio vacía’.</label>
-                  </div>
-                  <!-- Op C -->
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio11" name="customRadio2"
-                    class="custom-control-input" value="SAP" checked="">
-                    <label class="custom-control-label" for="customRadio11">
-                       ‘Qué lástima, podría estar llena’.</label>
-                  </div>
-                  <!-- Op D -->
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio12" name="customRadio2"
-                    class="custom-control-input" value="BAP" checked="">
-                    <label class="custom-control-label" for="customRadio12">
-                      ‘Qué suerte, podría estar vacía’.</label>
-                  </div>
-                </div>
-                <!-- Question/Pregunta -->
-                <legend>4. Si usted visualiza con la mente una pared que le cierra
-                  el camino, ¿qué piensa a continuación?</legend>
-                  <div class="form-group">
-                    <!-- Op A -->
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio13" name="customRadio3"
-                      class="custom-control-input" value="NAP" checked="">
-                      <label class="custom-control-label" for="customRadio13">
-                        Se siente incapaz de seguir adelante..</label>
-                    </div>
-                    <!-- Op B -->
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio14" name="customRadio3"
-                      class="custom-control-input" value="PAP" checked="">
-                      <label class="custom-control-label" for="customRadio14">
-                        Tiene la sensación de que se le va a caer encima.</label>
-                    </div>
-                    <!-- Op C -->
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio15" name="customRadio3"
-                      class="custom-control-input" value="SAP" checked="">
-                      <label class="custom-control-label" for="customRadio15">
-                         Idea una forma de rodearla y seguir adelante.</label>
-                    </div>
-                    <!-- Op D -->
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="customRadio16" name="customRadio3"
-                      class="custom-control-input" value="BAP" checked="">
-                      <label class="custom-control-label" for="customRadio16">
-                        Piensa en cómo tirarla abajo.</label>
-                    </div>
-                  </div>
-                  <!-- Question/Pregunta -->
-                  <legend>5. Acaba de ser rechazada/o para un puesto laboral, y al
-                    estar en la calle piensa o siente:</legend>
-                    <div class="form-group">
-                      <!-- Op A -->
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio17" name="customRadio4"
-                        class="custom-control-input" value="NAP" checked="">
-                        <label class="custom-control-label" for="customRadio17">
-                          ‘Quizá no soy lo suficientemente capaz para este tipo
-                          de trabajo’.</label>
-                      </div>
-                      <!-- Op B -->
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio18" name="customRadio4"
-                        class="custom-control-input" value="PAP" checked="">
-                        <label class="custom-control-label" for="customRadio18">
-                          ‘Debo descubrir algunas fallas en mí, y superarlas’.</label>
-                      </div>
-                      <!-- Op C -->
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio19" name="customRadio4"
-                        class="custom-control-input" value="SAP" checked="">
-                        <label class="custom-control-label" for="customRadio19">
-                           ‘Cada persona tiene un trabajo que la está esperando,
-                            y llega más tarde o más temprano’.</label>
-                      </div>
-                      <!-- Op D -->
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio20" name="customRadio4"
-                        class="custom-control-input" value="BAP" checked="">
-                        <label class="custom-control-label" for="customRadio20">
-                          ‘Yo nunca tengo suerte’.</label>
-                      </div>
-                    </div>
-                    <!-- Question/Pregunta -->
-                    <legend>6. ¿Qué frase aplicaría o aplica más, en general,
-                      ante las circunstancias de la vida?</legend>
-                      <div class="form-group">
-                        <!-- Op A -->
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio21" name="customRadio5"
-                          class="custom-control-input" value="NAP" checked="">
-                          <label class="custom-control-label" for="customRadio21">
-                            ‘Después de la tormenta viene la
-                            tranquilidad’.</label>
-                        </div>
-                        <!-- Op B -->
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio22" name="customRadio5"
-                          class="custom-control-input" value="PAP" checked="">
-                          <label class="custom-control-label" for="customRadio22">
-                            ‘Todo lo bueno se termina’.</label>
-                        </div>
-                        <!-- Op C -->
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio23" name="customRadio5"
-                          class="custom-control-input" value="SAP" checked="">
-                          <label class="custom-control-label" for="customRadio23">
-                             ‘Los sueños, sueños son’.</label>
-                        </div>
-                        <!-- Op D -->
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="customRadio24" name="customRadio5"
-                          class="custom-control-input" value="BAP" checked="">
-                          <label class="custom-control-label" for="customRadio24">
-                            ‘Lo último que se pierde es la esperanza’.</label>
-                        </div>
-                      </div>
-                      <!-- Question/Pregunta -->
-                      <legend>7. Un familiar o amigo le dijo que volvería a las
-                        10, son las once y media y todavía no ha llegado.
-                        ¿Qué actitud toma?</legend>
-                        <div class="form-group">
-                          <!-- Op A -->
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio25" name="customRadio6"
-                            class="custom-control-input" value="NAP" checked="">
-                            <label class="custom-control-label" for="customRadio25">
-                              Piensa inmediatamente que le pasó algo y en
-                              cualquier momento llama a la policía.</label>
-                          </div>
-                          <!-- Op B -->
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio26" name="customRadio6"
-                            class="custom-control-input" value="PAP" checked="">
-                            <label class="custom-control-label" for="customRadio26">
-                              Empieza a preocuparse.</label>
-                          </div>
-                          <!-- Op C -->
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio27" name="customRadio6"
-                            class="custom-control-input" value="SAP" checked="">
-                            <label class="custom-control-label" for="customRadio27">
-                               Se pone a enumerar todas las razones por las
-                               cuales puede haberse producido la demora.</label>
-                          </div>
-                          <!-- Op D -->
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio28" name="customRadio6"
-                            class="custom-control-input" value="BAP" checked="">
-                            <label class="custom-control-label" for="customRadio28">
-                              Se pone a mirar TV sin pensar en el asunto.</label>
-                          </div>
-                        </div>
-                        <!-- Question/Pregunta -->
-                        <legend>8. Acaba de discutir agriamente con una persona,
-                           a la que tendrá que seguir tratando, y luego de la
-                           disputa piensa:</legend>
-                          <div class="form-group">
-                            <!-- Op A -->
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio29" name="customRadio7"
-                              class="custom-control-input" value="NAP" checked="">
-                              <label class="custom-control-label" for="customRadio29">
-                                ‘Lo voy a mandar a…’</label>
-                            </div>
-                            <!-- Op B -->
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio30" name="customRadio7"
-                              class="custom-control-input" value="PAP" checked="">
-                              <label class="custom-control-label" for="customRadio30">
-                                ‘Bien, ya pasó…’</label>
-                            </div>
-                            <!-- Op C -->
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio31" name="customRadio7"
-                              class="custom-control-input" value="SAP" checked="">
-                              <label class="custom-control-label" for="customRadio31">
-                                 ¿Cómo no entiende que tengo toda la razón?’</label>
-                            </div>
-                            <!-- Op D -->
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio32" name="customRadio7"
-                              class="custom-control-input" value="BAP" checked="">
-                              <label class="custom-control-label" for="customRadio32">
-                                ‘Voy a repasar toda la discusión. Seguramente,
-                                debe haber puntos en los que puedo estar
-                                equivocado. Si es así, le ofreceré disculpas y
-                                olvidaremos bien todo el asunto’.</label>
-                            </div>
-                          </div>
-          </fieldset>
-      </form>
-      <section class="row mt-5 text-center">
-        <div class="col-md-6 m-auto">
-          <h2 class="display-5">Recibe los resultados de tu prueba</h2>
-          <p class="lead">
-            Entra tu nombre, apellido y correo
-          </p>
-          <form action="/signup" method="POST">
-            <div class="form-group">
-              <input
-                type="text"
-                name="firstName"
-                id="first-name"
-                class="form-control"
-                placeholder="First Name"
-              />
+              <input type="text" name="firstName" id="first-name" class="form-control" placeholder="First Name" />
             </div>
             <div class="form-group">
-              <input
-                type="text"
-                name="lastName"
-                id="last-name"
-                class="form-control"
-                placeholder="Last Name"
-              />
+              <input type="text" name="lastName" id="last-name" class="form-control" placeholder="Last Name" />
             </div>
             <div class="form-group">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form-control"
-                placeholder="Email"
-              />
+              <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
             </div>
             <div class="form-group">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input"
-                id="customCheck1" checked="">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
                 <label class="custom-control-label" for="customCheck1">
                   Check this custom checkbox</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input"
-                id="customCheck2" checked="">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" checked="">
                 <label class="custom-control-label" for="customCheck2">
                   Acepto ser contactado </label>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn-outline-primary btn-block">
               Sign Up
             </button>
-          </form>
-        </div>
-      </section>
-    </div>
-  </body>
+          </div>
+        </section>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
 </html>
