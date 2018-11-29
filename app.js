@@ -27,7 +27,7 @@ app.post('/signup', (req, res) => {
 
   var MongoClient = require('mongodb').MongoClient;
 
-  var uri = "mongo_url";
+  var uri = "mongodb_url";
   MongoClient.connect(uri, function(err, client) {
     if (err) throw err;
     const collection = client.db("Grupo-G").collection("actitud_free_test");
@@ -56,7 +56,41 @@ app.post('/signup', (req, res) => {
     client.close();
   });
   // Data for mailchimp
+  const data = {
+    members: [
+      {
+        email_address: email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName
+        }
+      }
+    ]
+  };
 
+  const postData = JSON.stringify(data);
+
+  const options = {
+    url: 'mailchimp_url',
+    method: 'POST',
+    headers: {
+      Authorization: 'auth text'
+    },
+    body: postData
+  };
+
+  request(options, (err, response, body) => {
+    if (err) {
+      res.redirect('/fail.html');
+    } else {
+      if (response.statusCode === 200) {
+        res.redirect('/success.html');
+      } else {
+        res.redirect('/fail.html');
+      }
+    }
+  });
 
 });
 
