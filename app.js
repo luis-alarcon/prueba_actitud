@@ -75,7 +75,7 @@ app.post('/signup', (req, res) => {
     url: 'mailchimp_url',
     method: 'POST',
     headers: {
-      Authorization: 'auth text'
+      Authorization: 'auth code'
     },
     body: postData
   };
@@ -91,8 +91,10 @@ app.post('/signup', (req, res) => {
       }
     }
   });
+  //post the name of the person subcribing
 
 });
+
 
 const PORT = process.env.PORT || 5000;
 
