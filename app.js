@@ -27,7 +27,7 @@ app.post('/signup', (req, res) => {
 
   var MongoClient = require('mongodb').MongoClient;
 
-  var uri = "mongodb_url";
+  var uri = "mongodb+srv://luis_alarcon:MDawwjoqQ3jFQr9y@cluster0-prw1g.mongodb.net/test?retryWrites=true";
   MongoClient.connect(uri, function(err, client) {
     if (err) throw err;
     const collection = client.db("Grupo-G").collection("actitud_free_test");
@@ -56,6 +56,7 @@ app.post('/signup', (req, res) => {
     client.close();
   });
   if (!newsletter){
+    const newsletter = "false"
     console.log("hi")
     console.log(newsletter)
     const options = {};
@@ -63,11 +64,41 @@ app.post('/signup', (req, res) => {
   } else {
     console.log("hi")
     console.log(newsletter)
-    const options = {};
+    // Data for mailchimp
+    const data = {
+      email_address:email,
+      status: "subscribed",
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName,
+      }
+    };
+    //Convert to String
+    const postData = JSON.stringify(data);
+    //Send Data to mailchimp
+    const options = {
+      url: 'mailchimp_api',
+      method: 'POST',
+      headers: {
+        Authorization: 'YOUR_API_KEY'
+      },
+      body: postData
+    };
 
+    request(options, (err, response, body) => {
+      if (err) {
+        res.redirect('/fail.html');
+        console.log("first error");
+      } else {
+        if (response.statusCode === 200) {
+          res.redirect('/success_newsletter.html');
+        } else {
+          console.log("second error");
+          res.redirect('/fail.html');
+        }
+      }
+    });
   }
-
-
 
 });
 
