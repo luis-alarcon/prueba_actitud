@@ -27,7 +27,7 @@ app.post('/signup', (req, res) => {
 
   var MongoClient = require('mongodb').MongoClient;
 
-  var uri = "mongodb_url";
+  var uri = "mongo_url";
   MongoClient.connect(uri, function(err, client) {
     if (err) throw err;
     const collection = client.db("Grupo-G").collection("actitud_free_test");
@@ -79,19 +79,29 @@ app.post('/signup', (req, res) => {
     },
     body: postData
   };
+  //awd
+
 
   request(options, (err, response, body) => {
     if (err) {
       res.redirect('/fail.html');
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/success.html');
+        res.render(path.join(__dirname + '/views/success.ejs'), {
+          name: firstName + " " + lastName
+        });
       } else {
         res.redirect('/fail.html');
       }
     }
   });
   //post the name of the person subcribing
+
+  // set the view engine to ejs
+  //app.set('view engine', 'ejs');
+  res.render('success.ejs', {
+        name: firstName + " " + lastName
+  });
 
 });
 
