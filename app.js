@@ -2,6 +2,7 @@ const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path');
+var nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -27,7 +28,7 @@ app.post('/signup', (req, res) => {
 
   var MongoClient = require('mongodb').MongoClient;
 
-  var uri = "mongo_url";
+  var uri = "mongodb_url";
   MongoClient.connect(uri, function(err, client) {
     if (err) throw err;
     const collection = client.db("Grupo-G").collection("actitud_free_test");
@@ -75,13 +76,24 @@ app.post('/signup', (req, res) => {
     url: 'mailchimp_url',
     method: 'POST',
     headers: {
-      Authorization: 'auth code'
+      Authorization: 'code'
     },
     body: postData
   };
-  //awd
+  // Email
+
+  var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'temp.la.gg.temp@gmail.com',
+    pass: '23D9ZpzZFfup6TeVZGHbPc'
+    }
+  });
+
+  // email
 
 
+  // Extra
   request(options, (err, response, body) => {
     if (err) {
       res.redirect('/fail.html');
@@ -90,6 +102,7 @@ app.post('/signup', (req, res) => {
         res.render(path.join(__dirname + '/views/success.ejs'), {
           name: firstName + " " + lastName
         });
+
       } else {
         res.redirect('/fail.html');
       }
